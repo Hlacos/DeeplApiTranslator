@@ -3,24 +3,23 @@
 namespace Hlacos\DeeplApiTranslator;
 
 use BabyMarkt\DeepL\DeepL;
-use Tanmuhittin\LaravelGoogleTranslate\Contracts\ApiTranslatorContract;
+use BabyMarkt\DeepL\DeepLException;
 
-class DeeplApiTranslator implements ApiTranslatorContract
+abstract class DeeplApiTranslator
 {
-    public $handle;
+    private DeepL $handle;
 
-    public function __construct($api_key)
+    public function __construct($apiKey, $apiVersion, $apiHost)
     {
-        $this->handle = new DeepL($api_key);
+        $this->handle = new DeepL($apiKey, $apiVersion, $apiHost);
     }
 
-    public function translate(string $text, string $locale, string $base_locale = null): string
+    /**
+     * @throws DeepLException
+     */
+    public function translate(string $text, string $locale, string $baseLocale = null): string
     {
-        try {
-            $translation = $this->handle->translate($text, $base_locale, $locale);
-        } catch (\Exception $e) {
-            return false;
-        }
+        $translation = $this->handle->translate($text, $baseLocale, $locale);
 
         return $translation[0]['text'];
     }

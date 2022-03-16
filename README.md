@@ -10,16 +10,19 @@ It supposed to the main package is installed and configured properly.
 
 ### Run composer install
 
-> composer require composer require hlacos/deepl-api-translator
+> composer require hlacos/deepl-api-translator
 
 ### Configure DeeplApiTranslator alias
 
 Add following Alias to config/app.php
 
-> 'DeeplApiTranslator' => Hlacos\DeeplApiTranslator\DeeplApiTranslator::class
+> 'DeeplFreeApiTranslator' => Hlacos\DeeplFreeApiTranslator\DeeplApiTranslator::class
+> 'DeeplProApiTranslator' => Hlacos\DeeplProApiTranslator\DeeplApiTranslator::class
 
 ### Configure Laravel google translate
 
 Set up the following keys in config/laravel_google_translate.php file:
-* custom_api_translator to DeeplApiTranslator
+* custom_api_translator key to
+  * 'DeeplFreeApiTranslator' or
+  * 'DeeplProApiTranslator'
 * custom_api_translator_key
