@@ -7,7 +7,7 @@ use Tanmuhittin\LaravelGoogleTranslate\Contracts\ApiTranslatorContract;
 class DeeplProApiTranslator extends DeeplApiTranslator implements ApiTranslatorContract
 {
     private int $apiVersion = 2;
-    private string $apiHost = 'https://api.deepl.com';
+    private string $apiHost = 'api.deepl.com';
 
     public function __construct($apiKey)
     {
