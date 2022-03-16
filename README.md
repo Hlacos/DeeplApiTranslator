@@ -10,7 +10,7 @@ It supposed to the main package is installed and configured properly.
 
 ### Run composer install
 
-> composer require composer require hlacos/deepl-api-translator
+> composer require hlacos/deepl-api-translator
 
 ### Configure DeeplApiTranslator alias
 
