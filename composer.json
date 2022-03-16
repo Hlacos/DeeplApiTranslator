@@ -1,0 +1,21 @@
+{
+    "name": "hlacos/deepl-api-translator",
+    "description": "Deepl API extension for tanmuhittin/laravel-google-translate",
+    "type": "library",
+    "require": {
+        "tanmuhittin/laravel-google-translate": "dev-master",
+        "babymarkt/deepl-php-lib": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "Hlacos\\DeeplApiTranslator\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "László Heiszmann",
+            "email": "heiszmann@hlacos.hu"
+        }
+    ],
+    "minimum-stability": "dev"
+}
