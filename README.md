@@ -16,8 +16,8 @@ It supposed to the main package is installed and configured properly.
 
 Add following Alias to config/app.php
 
-> 'DeeplFreeApiTranslator' => Hlacos\DeeplFreeApiTranslator\DeeplApiTranslator::class
-> 'DeeplProApiTranslator' => Hlacos\DeeplProApiTranslator\DeeplApiTranslator::class
+> 'DeeplFreeApiTranslator' => Hlacos\DeeplApiTranslator\DeeplFreeApiTranslator::class
+> 'DeeplProApiTranslator' => Hlacos\DeeplApiTranslator\DeeplProApiTranslator::class
 
 ### Configure Laravel google translate
 
