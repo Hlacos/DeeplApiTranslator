@@ -3,7 +3,6 @@
     "description": "Deepl API extension for tanmuhittin/laravel-google-translate",
     "type": "library",
     "require": {
-        "tanmuhittin/laravel-google-translate": "dev-master",
         "babymarkt/deepl-php-lib": "dev-master"
     },
     "autoload": {
