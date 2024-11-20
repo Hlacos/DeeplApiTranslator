@@ -10,7 +10,7 @@ abstract class DeeplApiTranslator
 
     public function __construct($apiKey)
     {
-        $this->handle = new \DeepL\Translator($authKey);
+        $this->handle = new \DeepL\Translator($apiKey);
     }
 
     public function translate(string $text, string $locale, string $baseLocale = null): string
