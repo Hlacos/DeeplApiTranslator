@@ -2,26 +2,22 @@
 
 namespace Hlacos\DeeplApiTranslator;
 
-use BabyMarkt\DeepL\DeepL;
-use BabyMarkt\DeepL\DeepLException;
+use DeepL\Translator;
 
 abstract class DeeplApiTranslator
 {
-    private DeepL $handle;
+    private Translator $handle;
 
-    public function __construct($apiKey, $apiVersion, $apiHost)
+    public function __construct($apiKey)
     {
-        $this->handle = new DeepL($apiKey, $apiVersion, $apiHost);
+        $this->handle = new \DeepL\Translator($authKey);
     }
 
-    /**
-     * @throws DeepLException
-     */
     public function translate(string $text, string $locale, string $baseLocale = null): string
     {
-        $translation = $this->handle->translate($text, $baseLocale, $locale);
+        $translation = $this->handle->translateText($text, $baseLocale, $locale);
 
-        return $translation[0]['text'];
+        return $translation->text;
     }
 }
 
